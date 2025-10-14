@@ -9,6 +9,8 @@ class PadreDeportes extends Component {
         return(
             <div>
                 <h1>Padre deportes</h1>
+                <h3 style={{backgroundColor: "yellow"}}>Su deporte favorito es:</h3>
+
                 {
                     this.deportes.map((nombre, index) => {
                         return(<HijoDeporte key={index} nombre={nombre} />)
