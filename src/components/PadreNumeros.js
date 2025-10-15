@@ -18,6 +18,12 @@ class PadreNumeros extends Component {
         })
     }
 
+    restarNumeros = (numero) => {
+        this.setState({
+            suma: this.state.suma - numero
+        })
+    }
+
     generarNumAleatorio = () => {
         let num = Math.floor(Math.random()*100);
         this.setState({
@@ -33,7 +39,7 @@ class PadreNumeros extends Component {
                 <button onClick={this.generarNumAleatorio}>Generar número</button>
                 {
                     this.state.numeros.map((numero, index) => {
-                        return(<HijoNumero key={index} numero={numero} suma={this.sumaNumeros}/>)
+                        return(<HijoNumero key={index} numero={numero} suma={this.sumaNumeros} resta={this.restarNumeros}/>)
                     })
                 }
             </div>
